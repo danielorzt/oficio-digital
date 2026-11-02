@@ -1,3 +1,8 @@
+export function asset(path: string) {
+  const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+  return `${base}${path}`;
+}
+
 export type Category = "Proyecto" | "Comunidad" | "Actividades";
 
 export type Block =
@@ -28,7 +33,7 @@ export const posts: Post[] = [
     category: "Proyecto",
     date: "2026-11-02",
     minutes: 6,
-    cover: "/images/taller.jpg",
+    cover: asset("/images/taller.jpg"),
     coverAlt: "Mecánico revisando un motor diésel con una tableta en un taller",
     blocks: [
       {
@@ -70,7 +75,7 @@ export const posts: Post[] = [
       },
       {
         kind: "figure",
-        src: "/images/duitama.jpg",
+        src: asset("/images/duitama.jpg"),
         alt: "Calle de un pueblo andino con un taller de puertas abiertas",
         caption: "Duitama, Boyacá. El acompañamiento presencial parte de la Carrera 42 # 8-62.",
       },
@@ -84,7 +89,7 @@ export const posts: Post[] = [
     category: "Comunidad",
     date: "2026-11-03",
     minutes: 7,
-    cover: "/images/diagnostico.jpg",
+    cover: asset("/images/diagnostico.jpg"),
     coverAlt: "Piezas de un motor diésel junto a un teléfono y una hoja de diagnóstico",
     blocks: [
       {
@@ -130,7 +135,7 @@ export const posts: Post[] = [
       },
       {
         kind: "figure",
-        src: "/images/glosario.jpg",
+        src: asset("/images/glosario.jpg"),
         alt: "Mesa de trabajo con computador y un glosario técnico",
         caption: "El inglés técnico entra por lo que el taller ya hace: fallas, manuales y repuestos.",
       },
@@ -144,7 +149,7 @@ export const posts: Post[] = [
     category: "Actividades",
     date: "2026-11-04",
     minutes: 5,
-    cover: "/images/glosario.jpg",
+    cover: asset("/images/glosario.jpg"),
     coverAlt: "Computador y material de estudio sobre una mesa de madera",
     blocks: [
       {

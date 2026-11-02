@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Cover, Shell } from "@/components/shell";
-import { formatDate, posts, sessions } from "@/lib/content";
+import { formatDate, posts, sessions, asset } from "@/lib/content";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -60,7 +60,7 @@ function Home() {
           </div>
         </div>
         <Cover
-          src="/images/taller.jpg"
+          src={asset("/images/taller.jpg")}
           alt="Mecánico revisando un motor diésel con una tableta"
           className="aspect-[16/10] shadow-lg"
         />

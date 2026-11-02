@@ -1,10 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/shell";
 import type { TopicStat } from "@/lib/forms/aggregate";
+import { emptyIndicators } from "@/lib/forms/aggregate";
 import { loadIndicators } from "@/lib/forms/indicators";
 
 export const Route = createFileRoute("/impacto")({
-  loader: () => loadIndicators(),
+  loader: async () => {
+    try {
+      return await loadIndicators();
+    } catch {
+      return emptyIndicators();
+    }
+  },
   component: ImpactoPage,
   head: () => ({ meta: [{ title: "Impacto · Oficio Digital" }] }),
 });

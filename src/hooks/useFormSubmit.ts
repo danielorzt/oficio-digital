@@ -33,7 +33,8 @@ export function useFormSubmit(formKey: FormKey) {
       setMessage(null);
 
       try {
-        const response = await fetch(`/api/forms/${formKey}`, {
+        const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+        const response = await fetch(`${base}/api/forms/${formKey}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(parsed.data),

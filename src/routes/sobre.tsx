@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Cover, Shell } from "@/components/shell";
+import { asset } from "@/lib/content";
 
 export const Route = createFileRoute("/sobre")({
   component: SobrePage,
@@ -27,7 +28,7 @@ function SobrePage() {
           </p>
         </div>
         <Cover
-          src="/images/duitama.jpg"
+          src={asset("/images/duitama.jpg")}
           alt="Taller con las puertas abiertas en un pueblo andino"
           className="aspect-[4/3]"
         />
