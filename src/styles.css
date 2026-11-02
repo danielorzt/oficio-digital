@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --color-paper: #f7f8fc;
+  --color-paper-2: #eef0f8;
+  --color-paper-3: #e7e6f6;
+  --color-ink: #12132e;
+  --color-muted: #454a6e;
+  --color-faint: #5f6487;
+  --color-line: #e4e6f2;
+  --color-accent: #c621e5;
+  --color-violet: #720cd4;
+  --color-accent-ink: #9d13bd;
+  --color-accent-soft: #fbe9fd;
+  --color-on-accent: #ffffff;
+  --radius-card: 1.625rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--color-violet) 0%, var(--color-accent) 100%);
+  color: var(--color-on-accent);
+}
+
+.dato {
+  background: linear-gradient(90deg, var(--color-violet) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
