@@ -5,6 +5,7 @@ dist
 screenshots
 artifacts
 .grok
+data
 *.log
 .env
 .env.*

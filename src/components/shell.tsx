@@ -41,11 +41,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
           <Link
-            to="/sobre"
-            hash="objetivos"
+            to="/participa"
             className="btn-accent hidden h-10 items-center rounded-full px-4 text-sm font-bold md:inline-flex"
           >
-            Ver objetivos
+            Participa
           </Link>
           <button
             type="button"
@@ -71,6 +70,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link to="/participa" className="flex h-12 items-center text-base font-bold text-accent-ink" onClick={() => setOpen(false)}>
+                  Participa
+                </Link>
+              </li>
             </ul>
           </nav>
         ) : null}
@@ -90,13 +94,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <p className="text-xs font-bold tracking-widest text-faint uppercase">Proyecto</p>
             <ul className="mt-3 space-y-2 text-sm font-semibold">
               <li>
-                <Link to="/sobre">Problemática y objetivos</Link>
+                <Link to="/participa">Diagnóstico</Link>
               </li>
               <li>
-                <Link to="/plan">Línea de tiempo</Link>
+                <Link to="/impacto">Impacto</Link>
               </li>
               <li>
-                <Link to="/blog">Entradas</Link>
+                <Link to="/privacidad">Privacidad</Link>
               </li>
             </ul>
           </div>

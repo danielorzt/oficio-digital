@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/shell";
 import { sessions } from "@/lib/content";
 
@@ -32,6 +32,13 @@ function PlanPage() {
                 <span className="font-bold text-ink">Indicador. </span>
                 {session.indicator}
               </p>
+              {session.week === "3" ? (
+                <p className="mt-3">
+                  <Link to="/participa" className="font-bold text-accent-ink underline underline-offset-4">
+                    Abrir el formulario de diagnóstico
+                  </Link>
+                </p>
+              ) : null}
             </li>
           ))}
         </ol>

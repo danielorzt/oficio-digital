@@ -11,11 +11,19 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as EvaluacionRouteImport } from './routes/evaluacion'
+import { Route as ImpactoRouteImport } from './routes/impacto'
+import { Route as ParticipaRouteImport } from './routes/participa'
 import { Route as PlanRouteImport } from './routes/plan'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
+import { Route as RegistroRouteImport } from './routes/registro'
+import { Route as SatisfaccionRouteImport } from './routes/satisfaccion'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as UbicacionRouteImport } from './routes/ubicacion'
+import { Route as ApiIndicatorsRouteImport } from './routes/api/indicators'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ApiFormsFormRouteImport } from './routes/api/forms/$form'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -27,9 +35,39 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EvaluacionRoute = EvaluacionRouteImport.update({
+  id: '/evaluacion',
+  path: '/evaluacion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactoRoute = ImpactoRouteImport.update({
+  id: '/impacto',
+  path: '/impacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParticipaRoute = ParticipaRouteImport.update({
+  id: '/participa',
+  path: '/participa',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlanRoute = PlanRouteImport.update({
   id: '/plan',
   path: '/plan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegistroRoute = RegistroRouteImport.update({
+  id: '/registro',
+  path: '/registro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SatisfaccionRoute = SatisfaccionRouteImport.update({
+  id: '/satisfaccion',
+  path: '/satisfaccion',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SobreRoute = SobreRouteImport.update({
@@ -42,6 +80,11 @@ const UbicacionRoute = UbicacionRouteImport.update({
   path: '/ubicacion',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiIndicatorsRoute = ApiIndicatorsRouteImport.update({
+  id: '/api/indicators',
+  path: '/api/indicators',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -52,57 +95,130 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const ApiFormsFormRoute = ApiFormsFormRouteImport.update({
+  id: '/api/forms/$form',
+  path: '/api/forms/$form',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
+  '/evaluacion': typeof EvaluacionRoute
+  '/impacto': typeof ImpactoRoute
+  '/participa': typeof ParticipaRoute
   '/plan': typeof PlanRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/registro': typeof RegistroRoute
+  '/satisfaccion': typeof SatisfaccionRoute
   '/sobre': typeof SobreRoute
   '/ubicacion': typeof UbicacionRoute
+  '/api/indicators': typeof ApiIndicatorsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/api/forms/$form': typeof ApiFormsFormRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/evaluacion': typeof EvaluacionRoute
+  '/impacto': typeof ImpactoRoute
+  '/participa': typeof ParticipaRoute
   '/plan': typeof PlanRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/registro': typeof RegistroRoute
+  '/satisfaccion': typeof SatisfaccionRoute
   '/sobre': typeof SobreRoute
   '/ubicacion': typeof UbicacionRoute
+  '/api/indicators': typeof ApiIndicatorsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
+  '/api/forms/$form': typeof ApiFormsFormRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
+  '/evaluacion': typeof EvaluacionRoute
+  '/impacto': typeof ImpactoRoute
+  '/participa': typeof ParticipaRoute
   '/plan': typeof PlanRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/registro': typeof RegistroRoute
+  '/satisfaccion': typeof SatisfaccionRoute
   '/sobre': typeof SobreRoute
   '/ubicacion': typeof UbicacionRoute
+  '/api/indicators': typeof ApiIndicatorsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/api/forms/$form': typeof ApiFormsFormRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/blog' | '/plan' | '/sobre' | '/ubicacion' | '/blog/$slug' | '/blog/'
+    | '/'
+    | '/blog'
+    | '/evaluacion'
+    | '/impacto'
+    | '/participa'
+    | '/plan'
+    | '/privacidad'
+    | '/registro'
+    | '/satisfaccion'
+    | '/sobre'
+    | '/ubicacion'
+    | '/api/indicators'
+    | '/blog/$slug'
+    | '/blog/'
+    | '/api/forms/$form'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/plan' | '/sobre' | '/ubicacion' | '/blog/$slug' | '/blog'
+  to:
+    | '/'
+    | '/evaluacion'
+    | '/impacto'
+    | '/participa'
+    | '/plan'
+    | '/privacidad'
+    | '/registro'
+    | '/satisfaccion'
+    | '/sobre'
+    | '/ubicacion'
+    | '/api/indicators'
+    | '/blog/$slug'
+    | '/blog'
+    | '/api/forms/$form'
   id:
     | '__root__'
     | '/'
     | '/blog'
+    | '/evaluacion'
+    | '/impacto'
+    | '/participa'
     | '/plan'
+    | '/privacidad'
+    | '/registro'
+    | '/satisfaccion'
     | '/sobre'
     | '/ubicacion'
+    | '/api/indicators'
     | '/blog/$slug'
     | '/blog/'
+    | '/api/forms/$form'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRouteWithChildren
+  EvaluacionRoute: typeof EvaluacionRoute
+  ImpactoRoute: typeof ImpactoRoute
+  ParticipaRoute: typeof ParticipaRoute
   PlanRoute: typeof PlanRoute
+  PrivacidadRoute: typeof PrivacidadRoute
+  RegistroRoute: typeof RegistroRoute
+  SatisfaccionRoute: typeof SatisfaccionRoute
   SobreRoute: typeof SobreRoute
   UbicacionRoute: typeof UbicacionRoute
+  ApiIndicatorsRoute: typeof ApiIndicatorsRoute
+  ApiFormsFormRoute: typeof ApiFormsFormRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -121,11 +237,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/evaluacion': {
+      id: '/evaluacion'
+      path: '/evaluacion'
+      fullPath: '/evaluacion'
+      preLoaderRoute: typeof EvaluacionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impacto': {
+      id: '/impacto'
+      path: '/impacto'
+      fullPath: '/impacto'
+      preLoaderRoute: typeof ImpactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/participa': {
+      id: '/participa'
+      path: '/participa'
+      fullPath: '/participa'
+      preLoaderRoute: typeof ParticipaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/plan': {
       id: '/plan'
       path: '/plan'
       fullPath: '/plan'
       preLoaderRoute: typeof PlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/registro': {
+      id: '/registro'
+      path: '/registro'
+      fullPath: '/registro'
+      preLoaderRoute: typeof RegistroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/satisfaccion': {
+      id: '/satisfaccion'
+      path: '/satisfaccion'
+      fullPath: '/satisfaccion'
+      preLoaderRoute: typeof SatisfaccionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sobre': {
@@ -142,6 +300,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UbicacionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/indicators': {
+      id: '/api/indicators'
+      path: '/api/indicators'
+      fullPath: '/api/indicators'
+      preLoaderRoute: typeof ApiIndicatorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/'
@@ -155,6 +320,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/api/forms/$form': {
+      id: '/api/forms/$form'
+      path: '/api/forms/$form'
+      fullPath: '/api/forms/$form'
+      preLoaderRoute: typeof ApiFormsFormRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -174,9 +346,17 @@ const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
+  EvaluacionRoute: EvaluacionRoute,
+  ImpactoRoute: ImpactoRoute,
+  ParticipaRoute: ParticipaRoute,
   PlanRoute: PlanRoute,
+  PrivacidadRoute: PrivacidadRoute,
+  RegistroRoute: RegistroRoute,
+  SatisfaccionRoute: SatisfaccionRoute,
   SobreRoute: SobreRoute,
   UbicacionRoute: UbicacionRoute,
+  ApiIndicatorsRoute: ApiIndicatorsRoute,
+  ApiFormsFormRoute: ApiFormsFormRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

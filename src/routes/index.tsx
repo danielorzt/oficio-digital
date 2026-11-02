@@ -44,18 +44,18 @@ function Home() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              to="/blog/$slug"
-              params={{ slug: posts[0].slug }}
+              to="/participa"
               className="btn-accent inline-flex h-12 items-center gap-2 rounded-full px-5 text-sm font-bold"
             >
-              Leer la primera entrada
+              Hacer el diagnóstico
               <ArrowRight size={16} />
             </Link>
             <Link
-              to="/plan"
+              to="/blog/$slug"
+              params={{ slug: posts[0].slug }}
               className="inline-flex h-12 items-center rounded-full border border-line bg-paper px-5 text-sm font-bold"
             >
-              Ver el plan
+              Leer la primera entrada
             </Link>
           </div>
         </div>
