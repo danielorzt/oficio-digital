@@ -26,6 +26,7 @@ const routes = [
   "blog/el-proyecto/index.html",
   "blog/la-brecha/index.html",
   "blog/primeras-sesiones/index.html",
+  "blog/ods-separacion-en-la-fuente/index.html",
   "sobre/index.html",
   "plan/index.html",
   "ubicacion/index.html",

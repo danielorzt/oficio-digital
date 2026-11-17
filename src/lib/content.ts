@@ -3,7 +3,7 @@ export function asset(path: string) {
   return `${base}${path}`;
 }
 
-export type Category = "Proyecto" | "Comunidad" | "Actividades";
+export type Category = "Proyecto" | "Comunidad" | "Actividades" | "Humanidades Digitales";
 
 export type Block =
   | { kind: "p"; text: string }
@@ -22,6 +22,7 @@ export type Post = {
   cover: string;
   coverAlt: string;
   blocks: Block[];
+  references?: string[];
 };
 
 export const posts: Post[] = [
@@ -205,6 +206,95 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "ods-separacion-en-la-fuente",
+    title: "Una bolsa, tres colores y cuatro ODS",
+    excerpt:
+      "A qué Objetivos de Desarrollo Sostenible aporta mi proyecto de Humanidades Digitales sobre separación en la fuente en Duitama, y cuáles prefiero no reclamar.",
+    category: "Humanidades Digitales",
+    date: "2026-11-16",
+    minutes: 7,
+    cover: asset("/images/ods-colores.svg"),
+    coverAlt: "Tres recipientes, blanco, verde y negro, con lo que va en cada uno",
+    blocks: [
+      {
+        kind: "p",
+        text: "Mi proyecto de Humanidades Digitales es un ejercicio corto y en línea: seis publicaciones en Instagram entre el 16 y el 29 de noviembre de 2026, un webinar de 30 minutos previsto para el sábado 28 y una entrevista tentativa el 2 de diciembre. El tema es la separación en la fuente de residuos en hogares y pequeños negocios de Duitama. Esta entrada responde la pregunta de la semana 4: a qué ODS aporta de verdad, y con qué derecho lo digo.",
+      },
+      { kind: "h2", text: "Qué hace el proyecto" },
+      {
+        kind: "p",
+        text: "El problema que elegí es el bajo conocimiento y la práctica irregular de la separación en la fuente. La meta es concreta: que al menos el 60 % de quienes respondan la encuesta de salida identifiquen el blanco, el verde y el negro de la Resolución 2184 de 2019 y escriban una acción que puedan hacer en su casa. También me puse una meta de alcance sin inflar: reunir al menos 30 personas entre reacciones, respuestas y asistencia. Si no se llega, publicaré el número real. En la imagen de arriba está la regla que quiero que la gente recuerde: el código de colores de la Resolución 2184 de 2019, obligatorio en todo el país desde el 1 de enero de 2021 (Ministerio de Ambiente y Desarrollo Sostenible, 2019).",
+      },
+      { kind: "h2", text: "Por qué es un asunto de desarrollo y no solo de aseo" },
+      {
+        kind: "p",
+        text: "La actualización del plan municipal de residuos (PGIRS) de Duitama recoge una caracterización donde los residuos de comida y alimentos pesaban 37,76 %, los materiales potencialmente aprovechables 26,87 % y los no aprovechables cerca de 35,37 % (Alcaldía de Duitama, 2021). Conviene decir que ese plan arrastra caracterizaciones anteriores, así que no son una medición de 2026. Sirven para ver de qué está hecha la basura local y por qué importa cómo sale de la casa: si todo viaja en una sola bolsa, el papel se humedece, el cartón pierde valor y el plástico se contamina.",
+      },
+      {
+        kind: "figure",
+        src: asset("/images/ods-datos.svg"),
+        alt: "Barra con tres tramos: comida 37,76 %, aprovechables 26,87 % y no aprovechables 35,37 %",
+        caption: "Composición de los residuos según el PGIRS de Duitama (Alcaldía de Duitama, 2021). Gráfico propio.",
+      },
+      {
+        kind: "p",
+        text: "A escala nacional, en 2024 se dispusieron 12.149.386 toneladas por el servicio público de aseo y casi todo fue a relleno (SSPD, 2025a). La tasa de aprovechamiento del servicio fue 19,69 % (SSPD, 2025b). Es decir, el país tiene la norma y todavía no tiene el hábito.",
+      },
+      {
+        kind: "figure",
+        src: asset("/images/ods-mapa.svg"),
+        alt: "ODS 12 como aporte principal y ODS 11, 4 y 8 como aportes secundarios",
+        caption: "Los cuatro ODS a los que aporta el proyecto, con su peso. Gráfico propio.",
+      },
+      { kind: "h2", text: "ODS 12: producción y consumo responsables (aporte principal)" },
+      {
+        kind: "p",
+        text: "La meta 12.5 pide reducir de forma considerable la generación de desechos mediante prevención, reducción, reciclado y reutilización (Naciones Unidas, 2015). Mi proyecto no baja ninguna tonelada. Toca el paso anterior: lo que el hogar entrega separado decide si el material se puede aprovechar o termina enterrado. El Decreto 596 de 2016 ya dice que presentar los residuos separados es obligación del usuario (Ministerio de Vivienda, Ciudad y Territorio, 2016). Separar no es un favor, es parte del servicio, y eso es lo que quiero que se entienda.",
+      },
+      { kind: "h2", text: "ODS 11: ciudades y comunidades sostenibles" },
+      {
+        kind: "p",
+        text: "La meta 11.6 incluye la gestión de los desechos municipales. En Duitama el PGIRS reconoce que los programas de educación y sensibilización no tuvieron continuidad y que su seguimiento fue escaso (Alcaldía de Duitama, 2021). Mi aporte es pequeño y local: pedagogía en un canal que la gente usa. La recolección y el servicio siguen en manos del operador y el municipio, y no pretendo reemplazarlos.",
+      },
+      { kind: "h2", text: "ODS 4: educación de calidad" },
+      {
+        kind: "p",
+        text: "La meta 4.7 habla de que las personas adquieran los conocimientos para promover el desarrollo sostenible. El webinar y la encuesta de salida son la parte educativa: tres mitos votados en el chat (todo el plástico se recicla, una sola bolsa facilita el trabajo, la comida da igual) y una acción para hacer esa semana. Es una sesión de media hora, no un programa. Por eso la reclamo como aporte secundario.",
+      },
+      { kind: "h2", text: "ODS 8: trabajo decente" },
+      {
+        kind: "p",
+        text: "El PGIRS nombra como problema el nivel de vida precario de la población recicladora (Alcaldía de Duitama, 2021). En 2024 la SSPD registró 76.707 recicladores de oficio en organizaciones en formalización en todo el país (SSPD, 2025b). Una bolsa mezclada le pasa a esa persona el trabajo de abrir y separar, y le baja el valor del material. Mi proyecto lo toca en una publicación, la del 23 de noviembre, y en una entrevista cuyo nombre solo se publicará si la persona lo autoriza. No tengo una cifra actual de recicladores en Duitama y no voy a inventarla. El aporte es indirecto y modesto.",
+      },
+      { kind: "h2", text: "Lo que no reclamo" },
+      {
+        kind: "p",
+        text: "Los orgánicos pesan más que cualquier otro grupo en la caracterización, y eso podría llevarme a hablar de acción climática (ODS 13). No lo hago porque el proyecto no mide emisiones ni compostaje, y poner un ODS en la lista sin una forma de comprobarlo es decorar, no analizar.",
+      },
+      { kind: "h2", text: "Cómo voy a saber si sirvió" },
+      {
+        kind: "list",
+        items: [
+          "ODS 12 y ODS 4: porcentaje de quienes responden la encuesta y aciertan los tres colores, con la meta del 60 %.",
+          "ODS 11: número de piezas publicadas con su fecha y enlace, y personas alcanzadas, con el mínimo de 30.",
+          "ODS 8: una entrevista realizada o, si no hay autorización, una nota honesta de por qué no se pudo.",
+        ],
+      },
+      {
+        kind: "p",
+        text: "Hoy empieza el calendario y todavía no hay resultados. Cuando existan publicaré las capturas con sus fechas y el número real, sea el que sea. Si queda por debajo del 60 %, corregiré la explicación en una pieza posterior y no el dato.",
+      },
+    ],
+    references: [
+      "Alcaldía de Duitama. (2021). Plan de Gestión Integral de Residuos Sólidos del municipio de Duitama: primera actualización.",
+      "Ministerio de Ambiente y Desarrollo Sostenible. (2019). Resolución 2184 de 2019, por la cual se modifica la Resolución 668 de 2016 y se adopta el código de colores para la separación de residuos sólidos en la fuente.",
+      "Ministerio de Vivienda, Ciudad y Territorio. (2016). Decreto 596 de 2016, por el cual se modifica el Decreto 1077 de 2015 en lo relativo al aprovechamiento del servicio público de aseo y al régimen transitorio para la formalización de los recicladores de oficio.",
+      "Naciones Unidas. (2015). Transformar nuestro mundo: la Agenda 2030 para el Desarrollo Sostenible (A/RES/70/1).",
+      "Superintendencia de Servicios Públicos Domiciliarios. (2025a). Informe nacional de disposición final de residuos sólidos 2024.",
+      "Superintendencia de Servicios Públicos Domiciliarios. (2025b). Informe sectorial de la actividad de aprovechamiento 2024.",
+    ],
+  },
 ];
 
 export const categories: Array<Category | "Todas"> = [
@@ -212,6 +302,7 @@ export const categories: Array<Category | "Todas"> = [
   "Proyecto",
   "Comunidad",
   "Actividades",
+  "Humanidades Digitales",
 ];
 
 export function getPost(slug: string) {

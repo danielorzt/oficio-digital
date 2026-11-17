@@ -22,7 +22,7 @@ function BlogIndex() {
           El proyecto, contado por partes.
         </h1>
         <p className="mt-4 max-w-xl text-muted">
-          Tres entradas para empezar. El sitio crece cuando hay una sesión nueva, no cuando hay que
+          Cuatro entradas hasta ahora. El sitio crece cuando hay una sesión nueva, no cuando hay que
           reescribir la página.
         </p>
         <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Filtrar por categoría">

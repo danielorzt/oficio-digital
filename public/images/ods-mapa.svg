@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+<title id="t">Los ODS a los que aporta el proyecto</title>
+<desc id="d">ODS 12 como aporte principal, y ODS 11, 4 y 8 como aportes secundarios.</desc>
+<rect width="1280" height="720" fill="#f7f8fc"/>
+<text x="64" y="92" font-size="40" font-weight="800" fill="#12132e">Cuatro ODS, con distinto peso</text>
+<text x="64" y="132" font-size="22" fill="#454a6e">Separación en la fuente en hogares y pequeños negocios de Duitama</text>
+<g>
+<rect x="64" y="170" width="1152" height="150" rx="16" fill="#720cd4"/>
+<text x="100" y="228" font-size="56" font-weight="800" fill="#ffffff">ODS 12</text>
+<text x="100" y="268" font-size="24" fill="#ffffff">Producción y consumo responsables</text>
+<text x="100" y="300" font-size="20" fill="#ffffff">Meta 12.5</text>
+<text x="700" y="222" font-size="22" font-weight="700" fill="#ffffff">Aporte principal</text>
+<text x="700" y="254" font-size="22" fill="#ffffff">Lo que el hogar separa define cuánto</text>
+<text x="700" y="284" font-size="22" fill="#ffffff">material se aprovecha en vez de enterrarse.</text>
+</g>
+<g font-size="22">
+<rect x="64" y="350" width="368" height="260" rx="16" fill="#ffffff" stroke="#e4e6f2" stroke-width="3"/>
+<text x="92" y="410" font-size="44" font-weight="800" fill="#9d13bd">ODS 11</text>
+<text x="92" y="448" font-weight="700" fill="#12132e">Ciudades sostenibles</text>
+<text x="92" y="478" fill="#454a6e">Meta 11.6 · residuos</text><text x="92" y="508" fill="#454a6e">municipales. Aporte:</text><text x="92" y="538" fill="#454a6e">pedagogía local.</text>
+<rect x="456" y="350" width="368" height="260" rx="16" fill="#ffffff" stroke="#e4e6f2" stroke-width="3"/>
+<text x="484" y="410" font-size="44" font-weight="800" fill="#9d13bd">ODS 4</text>
+<text x="484" y="448" font-weight="700" fill="#12132e">Educación de calidad</text>
+<text x="484" y="478" fill="#454a6e">Meta 4.7 · educación para</text><text x="484" y="508" fill="#454a6e">el desarrollo sostenible.</text><text x="484" y="538" fill="#454a6e">Aporte: webinar y encuesta.</text>
+<rect x="848" y="350" width="368" height="260" rx="16" fill="#ffffff" stroke="#e4e6f2" stroke-width="3"/>
+<text x="876" y="410" font-size="44" font-weight="800" fill="#9d13bd">ODS 8</text>
+<text x="876" y="448" font-weight="700" fill="#12132e">Trabajo decente</text>
+<text x="876" y="478" fill="#454a6e">Quien recicla recibe un</text><text x="876" y="508" fill="#454a6e">material mejor. Aporte:</text><text x="876" y="538" fill="#454a6e">indirecto y modesto.</text>
+</g>
+<text x="64" y="676" font-size="20" fill="#5f6487">Gráfico propio. Metas según la Agenda 2030 (Naciones Unidas, 2015).</text>
+</svg>

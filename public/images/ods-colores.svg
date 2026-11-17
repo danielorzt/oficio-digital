@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+<title id="t">Código de colores para separar residuos en Colombia</title>
+<desc id="d">Tres recipientes: blanco para aprovechables secos, verde para orgánicos aprovechables y negro para no aprovechables.</desc>
+<rect width="1280" height="720" fill="#f7f8fc"/>
+<text x="64" y="92" font-size="40" font-weight="800" fill="#12132e">Una bolsa, tres colores</text>
+<text x="64" y="132" font-size="22" fill="#454a6e">Resolución 2184 de 2019 · código nacional desde el 1 de enero de 2021</text>
+<g stroke="#12132e" stroke-width="3">
+<g transform="translate(112,190)"><path d="M0 40 H300 L272 330 H28 Z" fill="#ffffff"/><rect x="-14" y="0" width="328" height="44" rx="10" fill="#ffffff"/></g>
+<g transform="translate(490,190)"><path d="M0 40 H300 L272 330 H28 Z" fill="#2f9e5b"/><rect x="-14" y="0" width="328" height="44" rx="10" fill="#2f9e5b"/></g>
+<g transform="translate(868,190)"><path d="M0 40 H300 L272 330 H28 Z" fill="#1c1c24"/><rect x="-14" y="0" width="328" height="44" rx="10" fill="#1c1c24"/></g>
+</g>
+<g text-anchor="middle" font-weight="800" font-size="44">
+<text x="262" y="390" fill="#12132e">BLANCO</text>
+<text x="640" y="390" fill="#ffffff">VERDE</text>
+<text x="1018" y="390" fill="#ffffff">NEGRO</text>
+</g>
+<g text-anchor="middle" font-size="24" fill="#12132e">
+<text x="262" y="560">Papel, cartón, vidrio,</text><text x="262" y="592">plástico y metal,</text><text x="262" y="624">limpios y secos</text>
+<text x="640" y="560">Restos de comida,</text><text x="640" y="592">cáscaras y residuos</text><text x="640" y="624">de poda</text>
+<text x="1018" y="560">Lo que no se puede</text><text x="1018" y="592">aprovechar</text>
+</g>
+<text x="64" y="690" font-size="20" fill="#5f6487">Gráfico propio basado en la Resolución 2184 de 2019 (Ministerio de Ambiente y Desarrollo Sostenible).</text>
+</svg>

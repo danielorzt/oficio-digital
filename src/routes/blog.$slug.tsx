@@ -2,6 +2,14 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Cover, Shell } from "@/components/shell";
 import { formatDate, getPost, posts } from "@/lib/content";
 
+const defaultReferences = [
+  "DANE. (2024). Índice Multidimensional de Informalidad Empresarial (IMIE) 2024.",
+  "DANE. (2025). Encuesta de Tecnologías de la Información y las Comunicaciones en Hogares (ENTIC Hogares) 2024.",
+  "DANE. (2025). Índice de Pobreza Multidimensional.",
+  "Cámara de Comercio de Duitama. (2024). Caracterización socioeconómica y empresarial.",
+  "Pacheco Duarte, J. F., et al. (2022). Ruta de Innovación Social. UNIMINUTO.",
+];
+
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const post = getPost(params.slug);
@@ -92,11 +100,9 @@ function PostPage() {
         <section className="mt-12 rounded-card border border-line bg-paper-2 p-6">
           <h2 className="text-sm font-bold tracking-widest text-faint uppercase">Referencias</h2>
           <ul className="mt-3 space-y-2 text-sm text-muted">
-            <li>DANE. (2024). Índice Multidimensional de Informalidad Empresarial (IMIE) 2024.</li>
-            <li>DANE. (2025). Encuesta de Tecnologías de la Información y las Comunicaciones en Hogares (ENTIC Hogares) 2024.</li>
-            <li>DANE. (2025). Índice de Pobreza Multidimensional.</li>
-            <li>Cámara de Comercio de Duitama. (2024). Caracterización socioeconómica y empresarial.</li>
-            <li>Pacheco Duarte, J. F., et al. (2022). Ruta de Innovación Social. UNIMINUTO.</li>
+            {(post.references ?? defaultReferences).map((ref) => (
+              <li key={ref}>{ref}</li>
+            ))}
           </ul>
         </section>
         <nav className="mt-10 grid gap-4 border-t border-line pt-8 sm:grid-cols-2" aria-label="Entre entradas">

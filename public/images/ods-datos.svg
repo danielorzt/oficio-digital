@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+<title id="t">De qué está hecha la basura en Duitama</title>
+<desc id="d">Comida y alimentos 37,76 por ciento; materiales potencialmente aprovechables 26,87 por ciento; no aprovechables 35,37 por ciento.</desc>
+<rect width="1280" height="720" fill="#f7f8fc"/>
+<text x="64" y="92" font-size="40" font-weight="800" fill="#12132e">De qué está hecha la basura en Duitama</text>
+<text x="64" y="132" font-size="22" fill="#454a6e">Porcentaje del peso · caracterización del PGIRS actualizado (Alcaldía de Duitama, 2021)</text>
+<g>
+<rect x="64" y="200" width="1152" height="120" rx="10" fill="#e4e6f2"/>
+<rect x="64" y="200" width="435" height="120" rx="10" fill="#2f9e5b"/>
+<rect x="499" y="200" width="309" height="120" fill="#720cd4"/>
+<rect x="808" y="200" width="408" height="120" rx="10" fill="#1c1c24"/>
+<rect x="808" y="200" width="30" height="120" fill="#1c1c24"/>
+<rect x="469" y="200" width="30" height="120" fill="#2f9e5b"/>
+</g>
+<g font-weight="800" font-size="40" fill="#ffffff" text-anchor="middle">
+<text x="281" y="274">37,76 %</text><text x="653" y="274">26,87 %</text><text x="1012" y="274">35,37 %</text>
+</g>
+<g font-size="26" font-weight="700" fill="#12132e" text-anchor="middle">
+<text x="281" y="372">Comida y alimentos</text>
+<text x="653" y="372">Aprovechables</text>
+<text x="1012" y="372">No aprovechables</text>
+</g>
+<g font-size="22" fill="#454a6e" text-anchor="middle">
+<text x="281" y="410">va en el recipiente verde</text>
+<text x="653" y="410">van en el blanco, si salen limpios</text>
+<text x="1012" y="410">van en el negro</text>
+</g>
+<rect x="64" y="480" width="1152" height="150" rx="14" fill="#fbe9fd"/>
+<text x="96" y="530" font-size="26" font-weight="800" fill="#12132e">Dentro de lo aprovechable:</text>
+<text x="96" y="574" font-size="24" fill="#454a6e">plásticos 15,26 % · papel 4,16 % · cartón 3,05 % · vidrio 2,79 %</text>
+<text x="96" y="610" font-size="20" fill="#5f6487">Son cifras del plan municipal, que arrastra caracterizaciones anteriores. No son una medición de 2026.</text>
+<text x="64" y="676" font-size="20" fill="#5f6487">Gráfico propio con datos de Alcaldía de Duitama (2021).</text>
+</svg>
